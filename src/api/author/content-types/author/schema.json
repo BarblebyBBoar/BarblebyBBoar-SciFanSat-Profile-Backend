@@ -28,6 +28,18 @@
     "email": {
       "type": "string"
     },
+    "websiteUrl": {
+      "type": "string",
+      "required": false
+    },
+    "websiteUrl_2": {
+      "type": "string",
+      "required": false
+    },
+    "websiteUrl_3": {
+      "type": "string",
+      "required": false
+    },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
