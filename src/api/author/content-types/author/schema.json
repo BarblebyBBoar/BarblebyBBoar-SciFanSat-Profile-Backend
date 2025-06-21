@@ -21,6 +21,10 @@
       "required": false,
       "allowedTypes": ["images", "files", "videos"]
     },
+    "bio": {
+      "type": "richtext",
+      "localized": true
+    },
     "email": {
       "type": "string"
     },
