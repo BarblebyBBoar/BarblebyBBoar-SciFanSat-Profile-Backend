@@ -45,6 +45,10 @@
       "relation": "oneToMany",
       "target": "api::article.article",
       "mappedBy": "author"
+      "clerkUserId": {
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }
