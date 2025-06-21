@@ -5,30 +5,55 @@
     "singularName": "author",
     "pluralName": "authors",
     "displayName": "Author",
-    "description": "Create authors for your content"
+    "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true,
+    "populateCreatorFields": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "name": {
-      "type": "string"
+    "fullName": {
+      "type": "string",
+      "required": true
     },
-    "avatar": {
+    "slug": {
+      "type": "uid",
+      "targetField": "fullName",
+      "required": true
+    },
+    "bio": {
+      "type": "richtext",
+      "localized": true
+    },
+    "profilePicture": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": [
+        "images"
+      ]
     },
-    "email": {
-      "type": "string"
+    "websiteUrl": {
+      "type": "string",
+      "required": false
     },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "author"
+    "twitterHandle": {
+      "type": "string",
+      "required": false
+    },
+    "linkedInUrl": {
+      "type": "string",
+      "required": false
+    },
+    "clerkUserId": {
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }
